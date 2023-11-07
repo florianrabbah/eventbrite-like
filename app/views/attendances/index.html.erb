@@ -1,0 +1,9 @@
+<h1>Liste des Participations</h1>
+
+<ul>
+  <% @attendances.each do |attendance| %>
+    <li>
+      <%= attendances.user.email %> a participé à <%= attendance.event.title %>
+    </li>
+  <% end %>
+</ul>
