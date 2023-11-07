@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Nouvelle participation à votre événement</h1>
+  <p>Bonjour <%= @event_creator.first_name %> <%= @event_creator.last_name %>,</p>
+  <p>L'utilisateur <%= @participant.first_name %> <%= @participant.last_name %> a rejoint votre événement :</p>
+  <h2><%= @event.title %></h2>
+  <p>Description de l'événement : <%= @event.description %></p>
+  <p>Date et heure : <%= @event.start_date.strftime('%Y-%m-%d %H:%M') %></p>
+ </body>
+</html>
