@@ -1,16 +1,18 @@
 class AdminController < ApplicationController
   before_action :authenticate_admin
 
-
+def new
+  @user = User.new
+end
   def index
-    # Contenu de la page d'accueil du dashboard admin
+  @users = User.all 
+
+
   end
 
   
 
-def users
-@users = User.all
-end
+
 
 
 
@@ -44,6 +46,7 @@ end
 
 
  def user_params
+
   # Paramètres autorisés pour la modification de l'utilisateur
  end
 

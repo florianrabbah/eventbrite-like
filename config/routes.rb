@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'admin#index'
   end
+get "admin/index"
 
 
   namespace :admin do

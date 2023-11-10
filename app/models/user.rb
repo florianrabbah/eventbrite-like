@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :attendances
   has_many :administered_events, class_name: 'Event', foreign_key: 'admin_id'
 
-
+  enum role: { user: 0, admin: 1 }
 
 
 
