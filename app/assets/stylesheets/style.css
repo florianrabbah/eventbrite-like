@@ -1,0 +1,90 @@
+
+
+:root {
+  --primary-color: #FFC5C5;
+
+}
+/*---------------------------BANNI7ERE-------------------------------*/
+.banner {
+  background-image: url('url_de_votre_image.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0; /* Ajustez la valeur pour le padding en haut et en bas */
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+.custom-banner-image {
+  max-height: 400px; /* ajuste la hauteur maximale selon tes besoins */
+  width: auto; /* pour conserver les proportions originales de l'image */
+}
+/*-----------------------------------------------------------*/
+.navbar{
+  background-color: #FFC5C5; color:black;
+
+}.nav-item a{
+  color: black;
+}
+
+input#user_email {
+  height: 70px;
+}
+
+body {
+  background: #ececec; margin-bottom: 50px;
+}
+.card-event-parents .card{
+  background-color: white;
+min-height: 250px; margin-bottom: 25px;}
+.card-event-parents{margin-top: 100px;}
+
+
+
+.carrejaune_accueil{
+  position: absolute; /* absolute=vol */
+  z-index: 10;
+  top: 30%;
+  right: 0;
+  left: 0;
+  padding: 22px;
+  width: 50%;
+}
+.carrejaune_accueil div{background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 20px;}
+.carregris_accueil{
+  margin-top: 30px; padding: 20px;
+}
+
+.btn-primary {
+  background-color:var(--primary-color)
+}
+
+
+.carousel-item{margin-top: 25px;}
+/*fin*/
+
+@media only screen and (max-width: 768px) {
+  .carrejaune_accueil{
+  position: relative; /* =rapport aux autres blocs */
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 22px;
+  width: 100%;
+
+  /* Styles spécifiques aux téléphones */
+}
+}

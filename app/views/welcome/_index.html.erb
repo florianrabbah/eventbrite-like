@@ -1,51 +1,55 @@
-
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-lg-6 mb-4">
-      <h1 class="display-4">Trouvez des événements près de chez vous</h1>
-      <p class="lead">Découvrez les meilleurs événements organisés par des passionnés locaux.</p>
-      <form class="form-inline">
-  <input class="form-control mr-2" type="search" placeholder="Recherche  non disponibles" aria-label="Search">
-  <a href="<%= events_path %>">
-    <button class="btn btn-primary" type="button">Listes des évènements</button>
-  </a>
-</form>
+<div class="container-fluid">
+  <div id="carouselExample" class="carousel slide" style="max-height: 700px; overflow: hidden;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<%= image_path('bowling.jpg') %>" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= image_path('img1.jpg') %>" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<%= image_path('img2.jpg') %>" class="d-block w-100 img-fluid" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
-    <div class="col-lg-6">
-      <img src="/assets/img2.jpg" alt="Image1" class="img-fluid rounded">
-    </div>
-  </div>
 
-  <div class="row mt-4">
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="assets/macron.jpg" class="card-img-top" alt="Image d'événement">
-        <div class="card-body">
-          <h5 class="card-title">Macron CUL sec</h5>
-          <p class="card-text">Description . Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn btn-primary">En savoir plus</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="assets/img1" class="card-img-top" alt="Image">
-        <div class="card-body">
-          <h5 class="card-title">Paris by night</h5>
-          <p class="card-text">Description . Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn btn-primary">En savoir plus</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="assets/bowling.jpg" class="card-img-top" alt="Image d">
-        <div class="card-body">
-          <h5 class="card-title">Tournoi de Bowling</h5>
-          <p class="card-text">Description du event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="btn btn-primary">En savoir plus</a>
-        </div>
+
+
+
+
+
+
+<div class="container mt-3 carrejaune_accueil">
+<div class="" role="alert">
+  <h4 class="alert-heading">Bienvenue sur Eventbrite_zen !</h4>
+  <p>Ce site propose une expérience unique pour la gestion et la participation à des événements passionnants.</p>
+  <hr>
+  <p class="mb-0">Explorez, créez et participez à des événements exceptionnels dès maintenant !</p>
+</div>
+</div>
+
+
+
+<div class="row card-event-parents">
+<% @events.each do |event| %>
+  <div class="col-md-4 ">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.title %></h5>
+        <p class="card-text"><strong>Date :</strong> <%= event.start_date.strftime("%d/%m/%Y") %></p>
+        <p class="card-text"><strong>Prix :</strong> <%= event.price %> €</p>
+        <a href="<%= event_path(event) %>" class="btn btn-primary">Détails</a>
       </div>
     </div>
   </div>
+<% end %>
 </div>
