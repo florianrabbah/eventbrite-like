@@ -38,15 +38,17 @@ input#user_email {
   height: 70px;
 }
 
-body {
-  background: #ececec; margin-bottom: 50px;
+a.dropdown-item {
+  color: white;
 }
 .card-event-parents .card{
   background-color: white;
 min-height: 250px; margin-bottom: 25px;}
 .card-event-parents{margin-top: 100px;}
 
-
+.row.justify-content-center {
+  margin-top: 55px;
+}
 
 .carrejaune_accueil{
   position: absolute; /* absolute=vol */
@@ -73,7 +75,26 @@ padding: 20px;}
 }
 
 
-.carousel-item{margin-top: 25px;}
+.carousel-item{margin-top: 90px;}
+
+
+body {
+  background: #ececec; margin-bottom: 50px;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0; /* Fixe la barre de navigation en haut de la fenêtre */
+  width: 100%; /* Occupe la largeur complète de la fenêtre */
+  z-index: 1000;
+   
+ 
+}
+.part{ margin-top: 90px;}
+.col-md-4.mb-4 {
+  margin-top: 100px;
+}
+.alert{ margin-top: 90px;}
+
 /*fin*/
 
 @media only screen and (max-width: 768px) {
